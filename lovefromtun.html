@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Be My Girlfriend?</title>
+
+<style>
+body{
+    background-color:#ffe6f0;
+    text-align:center;
+    font-family:Arial;
+    margin-top:100px;
+}
+
+h1{
+    font-size:50px;
+    color:#ff4d88;
+}
+
+button{
+    font-size:25px;
+    padding:15px 30px;
+    margin:20px;
+    border:none;
+    border-radius:15px;
+    cursor:pointer;
+}
+
+.yes{
+    background-color:#ff66a3;
+    color:white;
+}
+
+.no{
+    background-color:gray;
+    color:white;
+}
+</style>
+
+<script>
+function yesClick(){
+    document.body.innerHTML =
+    "<h1>เออคิดถึงเหมือนกัน</h1>";
+}
+
+function moveButton(){
+    let btn = document.getElementById("noBtn");
+    btn.style.position="absolute";
+    btn.style.top=Math.random()*80+"%";
+    btn.style.left=Math.random()*80+"%";
+}
+</script>
+
+</head>
+
+<body>
+
+<h1>พี่เมย์คิดถึงตุนไหม 👀</h1>
+
+<button class="yes" onclick="yesClick()">เออ 💖</button>
+<button id="noBtn" class="no" onmouseover="moveButton()">ไม่ 😢</button>
+
+</body>
+</html>
